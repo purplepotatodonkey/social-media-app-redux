@@ -6,8 +6,6 @@ import PostAuthor from './PostAuthor';
 const SinglePostPage = () => {
     const { postId } = useParams();
 
-    console.log(`postId: ${postId}`)
-
     const post = useSelector(state => state.posts.find((post) => post.id === postId));
 
     if (!post) {
@@ -29,7 +27,7 @@ const SinglePostPage = () => {
           <p className="post-content">
             {post.content}
           </p>
-          <Link to={`/editPost/:${post.id}`} className="button">
+          <Link to={`/editPost/${post.id}`} className="button">
             Edit Post
           </Link>
         </article>

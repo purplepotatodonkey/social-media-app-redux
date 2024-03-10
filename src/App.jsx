@@ -6,18 +6,16 @@ import {
   Navigate
 } from 'react-router-dom'
 import SinglePostPage from './features/posts/SinglePostPage'
+import EditPostForm from './features/posts/EditPostForm';
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Routes>
-          <Route path="/" element={
-            <p>
-              You're at the root right now
-            </p>
-          } />
-          <Route path="/posts/:postId" element={<SinglePostPage />}/>
+          <Route path="/" element={<p>You're at the root right now</p>} />
+          <Route path="/posts/:postId" element={<SinglePostPage />} />
+          <Route path="/editPost/:postId" element={<EditPostForm />} />
         </Routes>
       </div>
     </Router>
