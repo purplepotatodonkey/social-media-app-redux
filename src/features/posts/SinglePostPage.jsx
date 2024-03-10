@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import TimeAgo from './TimeAgo'
 import { Link, useParams } from 'react-router-dom'
+import PostAuthor from './PostAuthor';
 
 const SinglePostPage = () => {
     const { postId } = useParams();
@@ -22,7 +23,7 @@ const SinglePostPage = () => {
         <article className="post">
           <h2>{post.title}</h2>
           <div>
-            <p>Insert post author here once user slice is made: {post.user}</p>
+            <PostAuthor userId={post.user} />
             <TimeAgo timestamp={post.date} />
           </div>
           <p className="post-content">
