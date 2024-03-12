@@ -41,8 +41,8 @@ const EditPostForm = () => {
         />
         <label>Content:</label>
         <textarea
-          id="postTitle"
-          name="postTitle"
+          id="postContent"
+          name="postContent"
           value={content}
           onChange={onContentChanged}
         />
