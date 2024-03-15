@@ -8,13 +8,14 @@ import {
 import SinglePostPage from './features/posts/SinglePostPage'
 import EditPostForm from './features/posts/EditPostForm';
 import AddPostForm from './features/posts/AddPostForm';
+import ViewPosts from './features/posts/ViewPosts';
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Routes>
-          <Route path="/" element={<p>You're at the root right now</p>} />
+          <Route path="/" element={<ViewPosts />} />
           <Route path="/posts/:postId" element={<SinglePostPage />} />
           <Route path="/editPost/:postId" element={<EditPostForm />} />
           <Route path="/addPost" element={<AddPostForm />} />
