@@ -9,10 +9,12 @@ import SinglePostPage from './features/posts/SinglePostPage'
 import EditPostForm from './features/posts/EditPostForm';
 import AddPostForm from './features/posts/AddPostForm';
 import ViewPosts from './features/posts/ViewPosts';
+import { Navbar } from './app/Navbar';
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <div className="app">
         <Routes>
           <Route path="/" element={<ViewPosts />} />
